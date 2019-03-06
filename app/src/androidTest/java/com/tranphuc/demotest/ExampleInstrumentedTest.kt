@@ -48,7 +48,7 @@ class ExampleInstrumentedTest {
 
     @Test
     fun checkLoginSuccess() {
-        Espresso.onView(withId(R.id.edtUserName)).perform(ViewActions.typeText("p"))
+        Espresso.onView(withId(R.id.edtUserName)).perform(ViewActions.typeText("phuc"))
         Espresso.onView(withId(R.id.edtPassword)).perform(ViewActions.typeText("1"))
         Espresso.onView(withId(R.id.btnLogin)).perform(ViewActions.click())
         intended(hasComponent(MainActivity::class.java.name))
@@ -59,6 +59,6 @@ class ExampleInstrumentedTest {
         Espresso.onView(withId(R.id.edtUserName)).perform(ViewActions.typeText("p2"))
         Espresso.onView(withId(R.id.edtPassword)).perform(ViewActions.typeText("1"))
         Espresso.onView(withId(R.id.btnLogin)).perform(ViewActions.click())
-        Espresso.onView(withText("sai")).inRoot(ToastMatcher()).check(matches(isDisplayed()))
+        Espresso.onView(withText("failed")).inRoot(ToastMatcher()).check(matches(isDisplayed()))
     }
 }

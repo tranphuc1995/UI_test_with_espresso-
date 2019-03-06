@@ -13,11 +13,11 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         btnLogin.setOnClickListener {
-            if(edtUserName.text.toString().equals("p") && edtPassword.text.toString().equals("1")){
+            if(edtUserName.text.toString().equals("phuc") && edtPassword.text.toString().equals("1")){
                 var intent = Intent(this,MainActivity::class.java)
                 startActivity(intent)
             }else{
-                Toast.makeText(this,"sai",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"failed",Toast.LENGTH_SHORT).show()
             }
         }
 
